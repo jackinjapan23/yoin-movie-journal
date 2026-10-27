@@ -48,12 +48,7 @@ A responsive Japanese movie review and vocabulary journal built with React, Type
 
 ## Deploy to GitHub Pages
 
-The included `.github/workflows/deploy-pages.yml` builds the app and publishes it whenever a commit is pushed to `main`. In the GitHub repository settings, add these Actions secrets:
-
-- `VITE_SUPABASE_URL`
-- `VITE_SUPABASE_PUBLISHABLE_KEY`
-
-They are browser-side public configuration values; database access is protected by row-level security. Never add a Supabase secret/service-role key. Enable GitHub Pages with **Build and deployment → GitHub Actions** if it is not already enabled.
+The included `.github/workflows/deploy-pages.yml` builds the app and publishes it whenever a commit is pushed to `main`. Its Supabase URL and publishable key are browser-side public configuration values; the site sends them to every visitor's browser as part of the app. Database access is protected by row-level security. Never add a Supabase secret/service-role key. Enable GitHub Pages with **Build and deployment → GitHub Actions** if it is not already enabled.
 
 After the first deployment, set the Supabase Authentication **Site URL** to the deployed Pages URL, including its repository path (for example, `https://OWNER.github.io/REPOSITORY/`). This lets sign-up confirmation and password-reset links return to the hosted app.
 
